@@ -1,5 +1,50 @@
-* {
+
+/* Container til hovedkategorier */
+.category-container {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling af hver hovedkategori */
+.main-category {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #ddd;
+}
+
+/* Hover-effekt for hovedkategorier */
+.main-category:hover {
+    background-color: #e0e0e0;
+}
+
+/* Produktlisten er skjult som standard */
+.product-list {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 10px;
     margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
+    z-index: 100;
+}
+
+/* Vis produktlisten når man hover over hovedkategorien */
+.main-category:hover .product-list {
+    display: block;
+}
+
+/* Styling af produktlisten */
+.product-list li {
+    margin-bottom: 5px;
+}
+
+/* Fjern margin fra sidste produkt i listen */
+.product-list li:last-child {
+    margin-bottom: 0;
 }
